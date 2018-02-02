@@ -71,6 +71,35 @@ define(function(require) {
             var percentageComplete = Math.floor((completed / total)*100);
 
 
+            console.log( this.model.attributes.title);
+            console.log(this.$('.article-container'));
+
+            var fosterClaimButton =  document.getElementById('foster-claim-button');
+
+            if (percentageComplete > 20 && !(typeof(fosterClaimButton) != 'undefined' && fosterClaimButton != null) ) {
+                var courseHash = btoa(encodeURIComponent(this.model.attributes.title).replace(/%([0-9A-F]{2})/g,
+                    function toSolidBytes(match, p1) {
+                        return String.fromCharCode('0x' + p1);
+                    }));
+
+                var data = {
+                    "percentComplete" : percentageComplete,
+                    "courseHash" : courseHash
+                };
+
+                var template = Handlebars.templates['fosterclaimbutton'];
+
+
+                if($('#foster-claim-button').length) {
+                    $('#foster-claim-button').html(template(data));
+                }else {
+                    $('.article-container').append("<div id='foster-claim-button' class='article'>" + template(data) +"</div>");
+                }
+
+
+            }
+
+
             this.$('.page-level-progress-navigation-bar').css('width', percentageComplete + '%');
 
             // Add percentage of completed components as an aria label attribute
