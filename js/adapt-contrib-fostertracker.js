@@ -14,7 +14,7 @@ define(function(require) {
     // This should add/update progress on page navigation bar
     Adapt.on('router:page', function(pageModel) {
 
-
+        console.log("aaaa");
         var currentPageComponents = _.filter(pageModel.findDescendantModels('components'), function(comp) {
             return comp.get('_isAvailable') === true;
         });
@@ -24,6 +24,7 @@ define(function(require) {
         if (enabledProgressComponents.length > 0) {
             setupPageLevelProgress(pageModel, enabledProgressComponents);
         }
+        
     });
 
 });

@@ -1,13 +1,13 @@
 {
-    "name": "adapt-contrib-pageLevelProgress",
+    "name": "adapt-contrib-fostertracker",
     "version": "2.0.11",
     "framework": ">=2.2.0",
-    "homepage": "https://github.com/adaptlearning/adapt-contrib-pageLevelProgress",
+    "homepage": "https://github.com/adaptlearning/adapt-contrib-fostertracker",
     "issues": "https://github.com/adaptlearning/adapt_framework/issues/new?title=contrib-pageLevelProgress%3A%20please%20enter%20a%20brief%20summary%20of%20the%20issue%20here&body=please%20provide%20a%20full%20description%20of%20the%20problem,%20including%20steps%20on%20how%20to%20replicate,%20what%20browser(s)/device(s)%20the%20problem%20occurs%20on%20and,%20where%20helpful,%20screenshots.",
-    "displayName": "Page Level Progress",
-    "extension": "pageLevelProgress",
+    "displayName": "FOSTER progress tracker",
+    "extension": "fostertracker",
     "description": "An extension to show a user's progress through a page",
-    "main": "/js/adapt-contrib-pageLevelProgress.js",
+    "main": "/js/adapt-contrib-fostertracker.js",
     "keywords": [
         "adapt-plugin",
         "adapt-extension"
@@ -15,3 +15,4 @@
     "license": "GPLv3",
     "targetAttribute": "_pageLevelProgress"
 }
+
